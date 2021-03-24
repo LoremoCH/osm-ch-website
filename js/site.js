@@ -49,6 +49,18 @@ L.SOSM.Map = L.Map.extend({
           keyid: "swiss-style",
           name: "swiss style"
       }),
+      new L.tileLayer.wms(
+        'https://wms.geo.admin.ch/?',
+      {
+        attribution: 'swissimage by &copySwissTopo',
+        format: 'image/vnd.jpeg-png',
+        layers: 'ch.swisstopo.images-swissimage',
+        transparent: true,
+        version: '1.3.0',
+        code: "L",
+        keyid: "swisstopo",
+        name: "swissimage Luftbild"
+      }),
     ];
   },
 
